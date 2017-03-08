@@ -1422,7 +1422,7 @@ next是Hexo的一个博客主题，这个主题 ，首页显示的文章列表�
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="xyazh.com/2017/02/21/搜索/">
+    <link itemprop="mainEntityOfPage" href="xyazh.com/2017/02/21/hexo-tags页面404/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="xyazh">
@@ -1444,8 +1444,8 @@ next是Hexo的一个博客主题，这个主题 ，首页显示的文章列表�
             
               
                 
-                <a class="post-title-link" href="/2017/02/21/搜索/" itemprop="url">
-                  第一篇测试
+                <a class="post-title-link" href="/2017/02/21/hexo-tags页面404/" itemprop="url">
+                  为什么部署之后，tags页面显示为404
                 </a>
               
             
@@ -1499,12 +1499,15 @@ next是Hexo的一个博客主题，这个主题 ，首页显示的文章列表�
       
         
           
-          测试文字输入
-1234&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;https://static.zhihu.com/static/revved/img/ios/touch-icon-152.87c020b9.png&quot; sizes
+          转自：http://chasen-g.cn/
+部署成功，tags页面404必须建立了页面才能浏览，操作为：
+12cd hexo目录 #定位到hexo根目录hexo new page &quot;tags&quot; #建立新页面
+到source/tags文件夹，修改index.md内入如下：
+123
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/02/21/搜索/#more" rel="contents">
+            <a class="btn" href="/2017/02/21/hexo-tags页面404/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
