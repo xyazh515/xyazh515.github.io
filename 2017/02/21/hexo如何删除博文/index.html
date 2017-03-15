@@ -436,24 +436,9 @@
           
   <div class="comments" id="comments">
     
-       <section id="comments">
-   <!-- ��˵���ۿ� start -->
-<div id="ds-thread" class="ds-thread" data-thread-key="2017/02/21/hexo如何删除博文/" data-title="hexo如何删除博文" data-url="xyazh.com/2017/02/21/hexo如何删除博文/" }}"></div>
-<!-- ��˵���ۿ� end -->
-<!-- ��˵����JS���� start (һ����ҳֻ������һ��) -->
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"shortTime"};
-  (function() {
-var ds = document.createElement('script');
-ds.type = 'text/javascript';ds.async = true;
-ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-ds.charset = 'UTF-8';
-(document.getElementsByTagName('head')[0] 
- || document.getElementsByTagName('body')[0]).appendChild(ds);
-  })();
-  </script>
-<!-- ��˵����JS���� end -->
-</section>
+     <!-- ��˵���ۿ� start -->  
+        <div class="ds-thread" data-thread-key="<%- page.path %>" data-title="<%- page.title %>" data-url="<%- page.permalink %>"></div>  
+<!-- ��˵���ۿ� end -->   <!-- ��˵����JS���� start (һ����ҳֻ������һ��) --> <script type="text/javascript"> var duoshuoQuery = {short_name:"xyazh"}; (function() { var ds = document.createElement('script'); ds.type = 'text/javascript';ds.async = true; ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js'; ds.charset = 'UTF-8'; (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds); })(); </script> <!-- ��˵����JS���� end --> 
     
   </div>
 
