@@ -3,7 +3,7 @@
   
     
     <entry>
-      <title><![CDATA[hexo添加]]></title>
+      <title><![CDATA[hexo添加搜索功能]]></title>
       <url>%2F2017%2F03%2F16%2Fhexo%E6%B7%BB%E5%8A%A0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD%2F</url>
       <content type="text"><![CDATA[给hexo添加一个搜索的功能，这里我们用的是Local Search。步骤： 首先，把Hexo\themes\next中的配置文件_config.yml修改一下 123# Local searchlocal_search: enable: false 修改为123# Local searchlocal_search: enable: true 然后，安装hexo-generator-searchdb，安装在根目录下，也就是Hexo目录下。 1$ npm install hexo-generator-searchdb --save 再然后就是添加search字段，在Hexo/_config.yml中添加search字段，如下： 12345search: path: search.xml field: post format: html limit: 10000 最后，推送上去，就OK了]]></content>
     </entry>
