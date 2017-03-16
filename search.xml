@@ -3,6 +3,20 @@
   
     
     <entry>
+      <title><![CDATA[hexo配置中加中文出现乱码]]></title>
+      <url>%2F2017%2F03%2F16%2Fhexo%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%8A%A0%E4%B8%AD%E6%96%87%E5%87%BA%E7%8E%B0%E4%B9%B1%E7%A0%81-1%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[hexo配置中加中文出现乱码]]></title>
+      <url>%2F2017%2F03%2F16%2Fhexo%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%8A%A0%E4%B8%AD%E6%96%87%E5%87%BA%E7%8E%B0%E4%B9%B1%E7%A0%81%2F</url>
+      <content type="text"><![CDATA[在配置hexo友情链接的时候，输入中文，出现了乱码，调试了好久，还是出现了乱码。。后来一同事问我，是不是文件编码格式出了问题，然后就把Hexo\themes\next中的_config存为utf-8格式，然后就没问题了。]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[hexo使用next主题，并且使用”多说“给博客的文章添加评论功能]]></title>
       <url>%2F2017%2F03%2F16%2Fhexo%E4%BD%BF%E7%94%A8next%E4%B8%BB%E9%A2%98%EF%BC%8C%E5%B9%B6%E4%B8%94%E4%BD%BF%E7%94%A8%E2%80%9D%E5%A4%9A%E8%AF%B4%E2%80%9C%E7%BB%99%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%96%87%E7%AB%A0%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD%2F</url>
       <content type="text"><![CDATA[给hexo添加评论功能的时候，这里使用的是“多说”。首先去多说首页，去网站上创建一个站点，然后获取使用的域名，这就是下文所要用到的duoshuo_shortname。 站点的hexo\themes\next目录下的_config.yml配置文件中找到duoshuo_shortname字段，设置为刚才创建站点时多说域名中的内容，没有前缀http://和后缀.duoshuo.com. 不知道为什么，我自己到这一步就成功了，但是看到很多教程，都需要配置文件。都需要配置hexo\themes\next\layout_partials目录下的comment.swing文件。 把原文件中的这段代码 123&lt;div class=&quot;ds-thread&quot; data-thread-key=&quot;&#123;&#123; page.path &#125;&#125;&quot; data-title=&quot;&#123;&#123; page.title &#125;&#125;&quot; data-url=&quot;&#123;&#123; page.permalink &#125;&#125;&quot;&gt; &lt;/div&gt; 替换成，多说网站，后台，工具里获取的代码 1&lt;!-- 多说评论框 start --&gt; &lt;div class=&quot;ds-thread&quot; data-thread-key=&quot;请将此处替换成文章在你的站点中的ID&quot; data-title=&quot;请替换成文章的标题&quot; data-url=&quot;请替换成文章的网址&quot;&gt;&lt;/div&gt; &lt;!-- 多说评论框 end --&gt; &lt;!-- 多说公共JS代码 start (一个网页只需插入一次) --&gt; &lt;script type=&quot;text/javascript&quot;&gt; var duoshuoQuery = &#123;short_name:&quot;xyazh&quot;&#125;; (function() &#123; var ds = document.createElement(&apos;script&apos;); ds.type = &apos;text/javascript&apos;;ds.async = true; ds.src = (document.location.protocol == &apos;https:&apos; ? &apos;https:&apos; : &apos;http:&apos;) + &apos;//static.duoshuo.com/embed.js&apos;; ds.charset = &apos;UTF-8&apos;; (document.getElementsByTagName(&apos;head&apos;)[0] || document.getElementsByTagName(&apos;body&apos;)[0]).appendChild(ds); &#125;)(); &lt;/script&gt; &lt;!-- 多说公共JS代码 end --&gt; 其中，把这一段 12&lt;!-- 多说评论框 start --&gt; &lt;div class=&quot;ds-thread&quot; data-thread-key=&quot;请将此处替换成文章在你的站点中的ID&quot; data-title=&quot;请替换成文章的标题&quot; data-url=&quot;请替换成文章的网址&quot;&gt;&lt;/div&gt; 改成 123&lt;!-- 多说评论框 start --&gt; &lt;div id=&quot;ds-thread&quot; class=&quot;ds-thread&quot; data-thread-key=&quot;&#123;&#123; page.path &#125;&#125;&quot; data-title=&quot;&#123;&#123; page.title &#125;&#125;&quot; data-url=&quot;&#123;&#123; page.permalink &#125;&#125;&quot; &#125;&#125;&quot;&gt;&lt;/div&gt; &lt;!-- 多说评论框 end --&gt; 然后再部署上去，就OK了。 需要注意的是：data-thread-key、data-title、data-url这三个变量一定要严格按照上述代码格式书写，否则会导致某一篇文章评论会显示在所有的文章里，造成数据的不准确。]]></content>
@@ -94,16 +108,16 @@
 
     
     <entry>
-      <title><![CDATA[第一篇测试]]></title>
-      <url>%2F2017%2F02%2F21%2F%E6%90%9C%E7%B4%A2%2F</url>
-      <content type="text"><![CDATA[测试文字输入 1234&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;https://static.zhihu.com/static/revved/img/ios/touch-icon-152.87c020b9.png&quot; sizes=&quot;152x152&quot;&gt;&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;https://static.zhihu.com/static/revved/img/ios/touch-icon-120.496c913b.png&quot; sizes=&quot;120x120&quot;&gt;&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;https://static.zhihu.com/static/revved/img/ios/touch-icon-76.dcf79352.png&quot; sizes=&quot;76x76&quot;&gt;&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;https://static.zhihu.com/static/revved/img/ios/touch-icon-60.9911cffb.png&quot; sizes=&quot;60x60&quot;&gt;]]></content>
+      <title><![CDATA[为什么部署之后，tags页面显示为404]]></title>
+      <url>%2F2017%2F02%2F21%2Fhexo-tags%E9%A1%B5%E9%9D%A2404%2F</url>
+      <content type="text"><![CDATA[转自：http://chasen-g.cn/ 部署成功，tags页面404必须建立了页面才能浏览，操作为： 12cd hexo目录 #定位到hexo根目录hexo new page &quot;tags&quot; #建立新页面 到source/tags文件夹，修改index.md内入如下： 1234title: Tagclouddate: 2014-12-22 12:39:04type: &quot;tags&quot;--- 编辑主题配置文件，添加tags到menu中，如下 1234menu: home: / archives: /archives tags: /tags 如果已经是这样，就不用修改。 ==发布新的博文到博客的时候，tags不能填hexo，否则会报错，不知道什么原因。== ==tags页面的标签数总会比你实际标签多一个，比如2个标签，但是总数却现实3个。参考了几个人的hexo 都是这样，没找到结局方法，但是不影响。==]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[为什么部署之后，tags页面显示为404]]></title>
-      <url>%2F2017%2F02%2F21%2Fhexo-tags%E9%A1%B5%E9%9D%A2404%2F</url>
-      <content type="text"><![CDATA[转自：http://chasen-g.cn/ 部署成功，tags页面404必须建立了页面才能浏览，操作为： 12cd hexo目录 #定位到hexo根目录hexo new page &quot;tags&quot; #建立新页面 到source/tags文件夹，修改index.md内入如下： 1234title: Tagclouddate: 2014-12-22 12:39:04type: &quot;tags&quot;--- 编辑主题配置文件，添加tags到menu中，如下 1234menu: home: / archives: /archives tags: /tags 如果已经是这样，就不用修改。 ==发布新的博文到博客的时候，tags不能填hexo，否则会报错，不知道什么原因。== ==tags页面的标签数总会比你实际标签多一个，比如2个标签，但是总数却现实3个。参考了几个人的hexo 都是这样，没找到结局方法，但是不影响。==]]></content>
+      <title><![CDATA[第一篇测试]]></title>
+      <url>%2F2017%2F02%2F21%2F%E6%90%9C%E7%B4%A2%2F</url>
+      <content type="text"><![CDATA[测试文字输入 1234&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;https://static.zhihu.com/static/revved/img/ios/touch-icon-152.87c020b9.png&quot; sizes=&quot;152x152&quot;&gt;&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;https://static.zhihu.com/static/revved/img/ios/touch-icon-120.496c913b.png&quot; sizes=&quot;120x120&quot;&gt;&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;https://static.zhihu.com/static/revved/img/ios/touch-icon-76.dcf79352.png&quot; sizes=&quot;76x76&quot;&gt;&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;https://static.zhihu.com/static/revved/img/ios/touch-icon-60.9911cffb.png&quot; sizes=&quot;60x60&quot;&gt;]]></content>
     </entry>
 
     
