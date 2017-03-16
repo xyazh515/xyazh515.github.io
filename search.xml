@@ -4,13 +4,6 @@
     
     <entry>
       <title><![CDATA[hexo配置中加中文出现乱码]]></title>
-      <url>%2F2017%2F03%2F16%2Fhexo%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%8A%A0%E4%B8%AD%E6%96%87%E5%87%BA%E7%8E%B0%E4%B9%B1%E7%A0%81-1%2F</url>
-      <content type="text"></content>
-    </entry>
-
-    
-    <entry>
-      <title><![CDATA[hexo配置中加中文出现乱码]]></title>
       <url>%2F2017%2F03%2F16%2Fhexo%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%8A%A0%E4%B8%AD%E6%96%87%E5%87%BA%E7%8E%B0%E4%B9%B1%E7%A0%81%2F</url>
       <content type="text"><![CDATA[在配置hexo友情链接的时候，输入中文，出现了乱码，调试了好久，还是出现了乱码。。后来一同事问我，是不是文件编码格式出了问题，然后就把Hexo\themes\next中的_config存为utf-8格式，然后就没问题了。]]></content>
     </entry>
@@ -108,16 +101,16 @@
 
     
     <entry>
-      <title><![CDATA[为什么部署之后，tags页面显示为404]]></title>
-      <url>%2F2017%2F02%2F21%2Fhexo-tags%E9%A1%B5%E9%9D%A2404%2F</url>
-      <content type="text"><![CDATA[转自：http://chasen-g.cn/ 部署成功，tags页面404必须建立了页面才能浏览，操作为： 12cd hexo目录 #定位到hexo根目录hexo new page &quot;tags&quot; #建立新页面 到source/tags文件夹，修改index.md内入如下： 1234title: Tagclouddate: 2014-12-22 12:39:04type: &quot;tags&quot;--- 编辑主题配置文件，添加tags到menu中，如下 1234menu: home: / archives: /archives tags: /tags 如果已经是这样，就不用修改。 ==发布新的博文到博客的时候，tags不能填hexo，否则会报错，不知道什么原因。== ==tags页面的标签数总会比你实际标签多一个，比如2个标签，但是总数却现实3个。参考了几个人的hexo 都是这样，没找到结局方法，但是不影响。==]]></content>
+      <title><![CDATA[第一篇测试]]></title>
+      <url>%2F2017%2F02%2F21%2F%E6%90%9C%E7%B4%A2%2F</url>
+      <content type="text"><![CDATA[测试文字输入 1234&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;https://static.zhihu.com/static/revved/img/ios/touch-icon-152.87c020b9.png&quot; sizes=&quot;152x152&quot;&gt;&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;https://static.zhihu.com/static/revved/img/ios/touch-icon-120.496c913b.png&quot; sizes=&quot;120x120&quot;&gt;&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;https://static.zhihu.com/static/revved/img/ios/touch-icon-76.dcf79352.png&quot; sizes=&quot;76x76&quot;&gt;&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;https://static.zhihu.com/static/revved/img/ios/touch-icon-60.9911cffb.png&quot; sizes=&quot;60x60&quot;&gt;]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[第一篇测试]]></title>
-      <url>%2F2017%2F02%2F21%2F%E6%90%9C%E7%B4%A2%2F</url>
-      <content type="text"><![CDATA[测试文字输入 1234&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;https://static.zhihu.com/static/revved/img/ios/touch-icon-152.87c020b9.png&quot; sizes=&quot;152x152&quot;&gt;&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;https://static.zhihu.com/static/revved/img/ios/touch-icon-120.496c913b.png&quot; sizes=&quot;120x120&quot;&gt;&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;https://static.zhihu.com/static/revved/img/ios/touch-icon-76.dcf79352.png&quot; sizes=&quot;76x76&quot;&gt;&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;https://static.zhihu.com/static/revved/img/ios/touch-icon-60.9911cffb.png&quot; sizes=&quot;60x60&quot;&gt;]]></content>
+      <title><![CDATA[为什么部署之后，tags页面显示为404]]></title>
+      <url>%2F2017%2F02%2F21%2Fhexo-tags%E9%A1%B5%E9%9D%A2404%2F</url>
+      <content type="text"><![CDATA[转自：http://chasen-g.cn/ 部署成功，tags页面404必须建立了页面才能浏览，操作为： 12cd hexo目录 #定位到hexo根目录hexo new page &quot;tags&quot; #建立新页面 到source/tags文件夹，修改index.md内入如下： 1234title: Tagclouddate: 2014-12-22 12:39:04type: &quot;tags&quot;--- 编辑主题配置文件，添加tags到menu中，如下 1234menu: home: / archives: /archives tags: /tags 如果已经是这样，就不用修改。 ==发布新的博文到博客的时候，tags不能填hexo，否则会报错，不知道什么原因。== ==tags页面的标签数总会比你实际标签多一个，比如2个标签，但是总数却现实3个。参考了几个人的hexo 都是这样，没找到结局方法，但是不影响。==]]></content>
     </entry>
 
     
