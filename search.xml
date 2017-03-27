@@ -3,13 +3,6 @@
   
     
     <entry>
-      <title></title>
-      <url>%2F2017%2F03%2F27%2Fjavascript%E6%8E%A7%E5%88%B6%E5%9B%BE%E7%89%87%E6%BB%9A%E5%8A%A8%E6%95%88%E6%9E%9C%2F</url>
-      <content type="text"><![CDATA[title javascript控制图片滚动效果date 2017-03-25 14:10:31 tags [Html,Css,JavaScript]今天写了个很简单的图片滚动效果，实现图片的滚动。 先贴上html代码，最里面有两个div，一个是放图片，一个先空着。 123456789101112131415161718192021&lt;div class=&quot;institute_block46&quot; id=&quot;demo&quot;&gt; &lt;div class=&quot;institute_block47&quot;&gt; &lt;div id=&quot;demo1&quot; style=&quot;float: left;&quot;&gt; &lt;img src=&quot;img/lianjie1.png&quot;/&gt; &lt;img src=&quot;img/lianjie2.png&quot;/&gt; &lt;img src=&quot;img/lianjie3.png&quot;/&gt; &lt;img src=&quot;img/lianjie4.png&quot;/&gt; &lt;img src=&quot;img/lianjie5.png&quot;/&gt; &lt;img src=&quot;img/lianjie6.png&quot;/&gt; &lt;img src=&quot;img/lianjie7.png&quot;/&gt; &lt;img src=&quot;img/lianjie1.png&quot;/&gt; &lt;img src=&quot;img/lianjie1.png&quot;/&gt; &lt;img src=&quot;img/lianjie1.png&quot;/&gt; &lt;img src=&quot;img/lianjie1.png&quot;/&gt; &lt;img src=&quot;img/lianjie1.png&quot;/&gt; &lt;img src=&quot;img/lianjie1.png&quot;/&gt; &lt;img src=&quot;img/lianjie1.png&quot;/&gt; &lt;/div&gt; &lt;div id=&quot;demo2&quot; style=&quot;float: left;&quot;&gt;&lt;/div&gt; &lt;/div&gt;&lt;/div&gt; 这里，有两个框，一个框是institute_block46，它是你所要展现的大小，css要设置overflow:hidden的属性，然后第二个框是institute_block47，这是你要存放滚动的图片的地方，所以它的范围要比较大，这两个框的css设置是这样的 123456789.institute_block46&#123; width: 1198px; height: 55px; overflow: hidden;&#125;.institute_block47&#123; float: left; width: 800%; &#125; 最后就是javascript代码 1234567891011121314151617&lt;script type=&quot;text/javascript&quot;&gt; var speed=15; var tab=document.getElementById(&quot;demo&quot;); var tab1=document.getElementById(&quot;demo1&quot;); var tab2=document.getElementById(&quot;demo2&quot;); tab2.innerHTML=tab1.innerHTML; function Marquee()&#123; if(tab2.offsetWidth-tab.scrollLeft&lt;=0) tab.scrollLeft-=tab1.offsetWidth else tab.scrollLeft++; &#125; var MyMar=setInterval(Marquee,speed); tab.onmouseover=function() &#123;clearInterval(MyMar)&#125;; tab.onmouseout=function() &#123;MyMar=setInterval(Marquee,speed)&#125;; &lt;/script&gt; 首先，获取到这三个ID，那个空着的div.innerHTML复制存放图片的html，然后写滚动效果，if(tab2.offsetWidth-tab.scrollLeft&lt;=0)，tab2.offsetWidth，也就是复制之后的展示宽度如果小于或等于滚动宽度，那么滚动宽度就减去一个展示宽度，就等于重新开始滚动。 最后添加了一个setInterval()，让它滚动起来。然后加了个鼠标移动上去停止，移出启动的函数。]]></content>
-    </entry>
-
-    
-    <entry>
       <title><![CDATA[html用javascript控制自动高度div]]></title>
       <url>%2F2017%2F03%2F23%2Fhtml%E7%94%A8javascript%E6%8E%A7%E5%88%B6%E8%87%AA%E5%8A%A8%E9%AB%98%E5%BA%A6div%2F</url>
       <content type="text"><![CDATA[今天在写网页的时候，碰到了一个问题，就是网页的内容会变化，所以长度不能固定。我在网上也找了下，没看到什么好的办法，就想到了，要不用js来控制吧。 首选，先设置一个变量来存储会变化的框的高度。当然，这几个框的height都设置成auto。 1var height=document.getElementById(jieshao_left_bg).offsetHeight; 然后让其他几个框的长度等于这个框的长度，这样就可以了。 123document.getElementById(jieshao_bg).style.height=left+px;document.getElementById(jieshao_bg2).style.height=left+px;document.getElementById(jieshao_right_bg).style.height=left+px; 注意，一定要加上单位，要不然是没有作用的 如果，只需要控制左边或者右边一边的长度是自动的话，那么就不需要用到js了，只需要加一个style=”clear: both;”，清除掉float的效果，那就可以达到所需要的自动高度。]]></content>
@@ -129,16 +122,16 @@
 
     
     <entry>
-      <title><![CDATA[第一篇测试]]></title>
-      <url>%2F2017%2F02%2F21%2F%E6%90%9C%E7%B4%A2%2F</url>
-      <content type="text"><![CDATA[测试文字输入 1234&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;https://static.zhihu.com/static/revved/img/ios/touch-icon-152.87c020b9.png&quot; sizes=&quot;152x152&quot;&gt;&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;https://static.zhihu.com/static/revved/img/ios/touch-icon-120.496c913b.png&quot; sizes=&quot;120x120&quot;&gt;&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;https://static.zhihu.com/static/revved/img/ios/touch-icon-76.dcf79352.png&quot; sizes=&quot;76x76&quot;&gt;&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;https://static.zhihu.com/static/revved/img/ios/touch-icon-60.9911cffb.png&quot; sizes=&quot;60x60&quot;&gt;]]></content>
+      <title><![CDATA[为什么部署之后，tags页面显示为404]]></title>
+      <url>%2F2017%2F02%2F21%2Fhexo-tags%E9%A1%B5%E9%9D%A2404%2F</url>
+      <content type="text"><![CDATA[转自：http://chasen-g.cn/ 部署成功，tags页面404必须建立了页面才能浏览，操作为： 12cd hexo目录 #定位到hexo根目录hexo new page &quot;tags&quot; #建立新页面 到source/tags文件夹，修改index.md内入如下： 1234title: Tagclouddate: 2014-12-22 12:39:04type: &quot;tags&quot;--- 编辑主题配置文件，添加tags到menu中，如下 1234menu: home: / archives: /archives tags: /tags 如果已经是这样，就不用修改。 ==发布新的博文到博客的时候，tags不能填hexo，否则会报错，不知道什么原因。== ==tags页面的标签数总会比你实际标签多一个，比如2个标签，但是总数却现实3个。参考了几个人的hexo 都是这样，没找到结局方法，但是不影响。==]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[为什么部署之后，tags页面显示为404]]></title>
-      <url>%2F2017%2F02%2F21%2Fhexo-tags%E9%A1%B5%E9%9D%A2404%2F</url>
-      <content type="text"><![CDATA[转自：http://chasen-g.cn/ 部署成功，tags页面404必须建立了页面才能浏览，操作为： 12cd hexo目录 #定位到hexo根目录hexo new page &quot;tags&quot; #建立新页面 到source/tags文件夹，修改index.md内入如下： 1234title: Tagclouddate: 2014-12-22 12:39:04type: &quot;tags&quot;--- 编辑主题配置文件，添加tags到menu中，如下 1234menu: home: / archives: /archives tags: /tags 如果已经是这样，就不用修改。 ==发布新的博文到博客的时候，tags不能填hexo，否则会报错，不知道什么原因。== ==tags页面的标签数总会比你实际标签多一个，比如2个标签，但是总数却现实3个。参考了几个人的hexo 都是这样，没找到结局方法，但是不影响。==]]></content>
+      <title><![CDATA[第一篇测试]]></title>
+      <url>%2F2017%2F02%2F21%2F%E6%90%9C%E7%B4%A2%2F</url>
+      <content type="text"><![CDATA[测试文字输入 1234&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;https://static.zhihu.com/static/revved/img/ios/touch-icon-152.87c020b9.png&quot; sizes=&quot;152x152&quot;&gt;&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;https://static.zhihu.com/static/revved/img/ios/touch-icon-120.496c913b.png&quot; sizes=&quot;120x120&quot;&gt;&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;https://static.zhihu.com/static/revved/img/ios/touch-icon-76.dcf79352.png&quot; sizes=&quot;76x76&quot;&gt;&lt;link rel=&quot;apple-touch-icon&quot; href=&quot;https://static.zhihu.com/static/revved/img/ios/touch-icon-60.9911cffb.png&quot; sizes=&quot;60x60&quot;&gt;]]></content>
     </entry>
 
     
