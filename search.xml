@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[js循环中的闭包问题]]></title>
+      <url>%2F2017%2F04%2F11%2Fjs%E5%BE%AA%E7%8E%AF%E4%B8%AD%E7%9A%84%E9%97%AD%E5%8C%85%E9%97%AE%E9%A2%98%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
       <title></title>
       <url>%2F2017%2F04%2F11%2Fjavascript%E6%8A%A5%E9%94%99%E9%97%AE%E9%A2%981%2F</url>
       <content type="text"><![CDATA[title: javascript报错问题1date: 2017-04-11 22:13:53tags [Html,JavaScript]—今天写代码遇到过一个问题，那就是把一段js代码放在标签中，出现了Uncaught TypeError: Cannot set property ‘onclick’ of null的提示。后来去网上搜了下，大概明白了原因。 123456789101112131415161718&lt;!DOCTYPE html&gt;&lt;html&gt; &lt;head&gt; &lt;meta charset=&quot;UTF-8&quot;/&gt; &lt;script&gt; document.getElementById(&quot;myBtn&quot;).onclick=function()&#123;aa()&#125;; function aa() &#123; document.getElementById(&quot;demo&quot;).innerHTML=Date(); &#125; &lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;div&gt;点击按钮就可以执行aa()函数。&lt;/div&gt;&lt;button id=&quot;myBtn&quot;&gt;点击这里&lt;/button&gt;&lt;div id=&quot;demo&quot;&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt; 而节点需要先加载完才能执行onclick事件，所以，先让节点加载完之后，再执行JS。 1234567891011121314151617181920&lt;!DOCTYPE html&gt;&lt;html&gt; &lt;head&gt; &lt;meta charset=&quot;UTF-8&quot;/&gt; &lt;script&gt; window.onload=function()&#123; document.getElementById(&quot;myBtn&quot;).onclick=function()&#123;aa()&#125;; function aa() &#123; document.getElementById(&quot;demo&quot;).innerHTML=Date(); &#125; &#125; &lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;div&gt;点击按钮就可以执行aa()函数。&lt;/div&gt;&lt;button id=&quot;myBtn&quot;&gt;点击这里&lt;/button&gt;&lt;div id=&quot;demo&quot;&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt; 或者，把JS写在里面，这种写法，浏览器是先加载完节点，才开始执行JS。123456789101112131415161718&lt;!DOCTYPE html&gt;&lt;html&gt; &lt;head&gt; &lt;meta charset=&quot;UTF-8&quot;/&gt;&lt;/head&gt;&lt;body&gt;&lt;div&gt;点击按钮就可以执行aa()函数。&lt;/div&gt;&lt;button id=&quot;myBtn&quot;&gt;点击这里&lt;/button&gt; &lt;script&gt; document.getElementById(&quot;myBtn&quot;).onclick=function()&#123;aa()&#125;; function aa() &#123; document.getElementById(&quot;demo&quot;).innerHTML=Date(); &#125; &lt;/script&gt;&lt;div id=&quot;demo&quot;&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;]]></content>
